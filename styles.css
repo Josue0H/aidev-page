@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo_img{
+    width: 25%;
+    cursor: pointer;
+}
+
+.nav-link{
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #212529;
+    background-color: white;
+}
+
+.active{
+    color: #212529;
+    background-color: white;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #333; 
+    color: #fff;
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px;  
+    position: fixed;  
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+  }
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    
+    @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    
+    @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+    
+    @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+
+.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 1.5s;
+    animation: fadein 0.5s, fadeout 0.5s 1.5s;
+  }
+
+.user{
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+
+.slider{
+    max-width: 100%;
+    max-height: 20%;
+    width: 90%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    border-radius:5px;
+}
+
+.slide img{
+    width: 100%;
+    min-height: 20%;
+    height: inherit;
+    object-fit: cover;
+    vertical-align: top;
+    transition: 2s;
+}
+
+.flechas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+}
+
+.flechas a{
+    color: #212529;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+
+.flechas a:hover{
+    color: white;
+    background-color: rgba(33, 36, 41, 0.5);
+    transition: 0.5s;
+}
+
+.barras{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.barra{
+    cursor: pointer;
+    height: 2px;
+    width: 25px;
+    margin: 0 2px;
+    background: white;
+    display: inline-block;
+    padding-left: 3px;
+}
+
+.activeBar{
+    background: #212529;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade{
+    from { opacity: .4;}
+    to {opacity: 1;}
+}
+
+.sm{
+    display:flex;
+    justify-content:center;
+}
+
+.sm a{
+    text-decoration: none;
+    color: white;
+    margin: 0.5rem;
+    font-size: 30px;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.sm a:hover{
+    color: #212529;
+    background-color: white;
+}
